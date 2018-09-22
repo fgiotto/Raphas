@@ -1,0 +1,24 @@
+﻿@model IEnumerable<RaphasMovieReview.Models.Review>
+
+    @{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+<nav class="archive archive-posts">
+    <h2 class="archive-title">Every great film should seem new every time you see it</h2>
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <a data-type="@for (int i = 0; i < item.Rating; i++)
+                    {
+                        <text>★</text>
+                    }" class="archive-post-link " href="/Review/Details/@item.ID">
+                <p class="archive-post-name">@item.MovieName</p>
+            </a>
+        }
+    }
+</nav>
+
+

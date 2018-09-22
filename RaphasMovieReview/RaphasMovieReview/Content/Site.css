@@ -1,0 +1,126 @@
+﻿div.grid-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+.archive {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 18rem;
+}
+.archive-title {
+    font-size: 25px;
+    font-family: inherit;
+    line-height: 44px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-weight: 600;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 102px;
+}
+
+:root {
+    font-family: "Iowan";
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.archive-post-link {
+    font-size: 18px;
+    font-family: inherit;
+    line-height: 1rem;
+    transition: color 300ms ease-out;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    color: rgb(64, 64, 64);
+}
+    .archive-post-link:hover {
+        color: #807f7f;
+        text-decoration: none;
+    }
+        .archive-post-link:hover::after {
+            opacity: 1;
+        }
+
+    .archive-post-link::after {
+        font-size: 16px;
+        font-family: inherit;
+        line-height: 27px;
+        padding-bottom: 3.4px;
+        padding-left: 15px;
+        content: attr(data-type);
+        text-transform: capitalize;
+        pointer-events: none;
+        transition-property: opacity, transform;
+        opacity: 0;
+        font-style: italic;
+        float: right;
+    }
+
+*:after, *:before {
+    box-sizing: border-box;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    transition-property: none;
+}
+
+    a {
+    text-decoration: none;
+}
+.archive-post-name {
+    flex: 0 1 auto;
+}
+
+    div.gallery img {
+        width: 100%;
+        height: 90%;
+        position: relative;
+    }
+div.rating {
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
